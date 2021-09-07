@@ -107,7 +107,7 @@ const addValues = (arr, value) => {
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
    
- for (let x = 0; x <= times; x++) {
+ for (let x = 0; x < times; x++) {
   callback(arr,num);
  }
   return arr;
