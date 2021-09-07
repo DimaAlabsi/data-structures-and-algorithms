@@ -11,10 +11,10 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 const raisedToTheThird = (arr) => {
   // Solution code here...
   let arr2 = [];
- arr.forEach(item => {
-    arr2.push(Math.pow(item, 3));
-  });
-  return arr2;
+  arr.forEach(item => {
+     arr2.push(Math.pow(item, 3));
+   });
+   return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,9 +41,9 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 const addQuestion = (arr) => {
   // Solution code here...
   let q=[];
-   q  = arr.map(i =>
-     i+ '?');
-  return q;
+  q  = arr.map(i =>
+    i+ '?');
+ return q;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -88,6 +88,13 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 
 const mapTwoToThe = (arr) => {
   // Solution code here...
+  let arr2 = [];
+   arr2 = arr.map(i => {
+
+    return Math.pow(2,i);
+  });
+
+    return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,6 +109,7 @@ For example: charCode(['h','i']) returns [104, 105].
 
 const charCode = (arr) => {
   // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
