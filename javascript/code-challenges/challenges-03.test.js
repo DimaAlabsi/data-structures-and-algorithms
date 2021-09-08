@@ -80,12 +80,18 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-  let arr2 = forbiddenValues.filter(i=>{
-  
+  let items = arr.filter(value =>{
 
-
+    if(!forbiddenValues.includes(value)){
+      
+      return true;
+    }
   });
-  return arr;  
+
+
+  return items;
+  
+ 
   
 };
 
