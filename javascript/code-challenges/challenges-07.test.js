@@ -42,6 +42,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
+  arr.splice(idx,3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,8 +139,12 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
-  return result;
-};
+  recipe.ingredients.map((i) => {
+    let item = i.split(" ");
+    item.splice(0,2);
+    result.push(item.join(" "));
+  });
+  return result;};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
