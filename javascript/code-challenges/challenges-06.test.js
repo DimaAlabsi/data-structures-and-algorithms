@@ -18,15 +18,18 @@ For example:
   shoeSize: 8
 }
 ]
+// arr2=arr.map((i)=>{
+  let rev=i.name.split('')
+})
 
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
 const getNames = (arr) => {
   // Solution code here...
-  let arr2 = [];
-  arr2 = arr.map((i)=> {
-    let reverse = i.name.split('').reverse();
+   let arr2 = [];
+  arr2 =arr.map((i) => {
+    let reverse= i.name.split('').reverse();
     let join = reverse.join('');
     return join;
   })
@@ -40,8 +43,6 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-
-  
 const appendTheEnd = (str) => {
   // Solution code here...
   let strString= str +' The end.';
@@ -63,9 +64,11 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
-  let arr2= [];
+  let arr2=[];
+  // let arr2= [];
   arr2 =  arr[0]; 
   arr.push(arr2);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,6 +88,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
   // Solution code here...
+    
   obj['yearBorn']=year;
 
 };
