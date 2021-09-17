@@ -10,6 +10,13 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
+  let arr2 = arr.reduce((i, x) => {
+if (i > x) {
+      return i;}
+    else {
+      return x; }
+  })
+  return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,6 +33,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
+ return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,6 +46,8 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  let object = Object.values(obj);
+  return object.includes(value) ? true : false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,6 +71,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  return Object.entries(obj).map(i=>
+    i.join(': '));
+
 };
 
 
@@ -138,6 +151,16 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  let result = false;
+  for (let i = 0; i < arr.length; i++) {
+    let object = Object.values(arr[i]);
+    if (character === object[0]) {
+      if (object.length > 3) {
+        result = true;
+      }
+    }
+  }
+  return result;
 
 };
 
