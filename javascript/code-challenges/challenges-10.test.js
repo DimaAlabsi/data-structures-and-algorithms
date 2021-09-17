@@ -32,6 +32,16 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let max =0;
+  for (let i=0;i<matrix.length; i++){
+    for (let x=0;x<matrix[i].length;
+      x++){
+        if (matrix[i][x]> max){
+          max=matrix[i][x]
+        }
+      }
+  }
+  return max;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -50,6 +60,12 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let total=0
+  for (let i = 0; i < matrix.length; i++) {
+   for (let x = 0; x < matrix[i].length; x++) {
+      total += matrix[i][x];  }
+  }
+  return total;
 };
 
 
@@ -77,6 +93,15 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  let arr= [];
+  for (let i = 0; i <hoursOpen.length; i++) {
+    let total = 0;
+    for (let x = 0; x < stores.length; x++) {
+      total += stores[x][i];
+    }
+    arr.push(total);
+  }
+  return arr;
 
 };
 
@@ -92,6 +117,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let arr=[];
+  data.forEach((v,i) => {
+    arr.push({ sales: `${v} cookies`, time: `${hours[i]}` });
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -117,6 +147,17 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let quantity = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i].store === 'Pet store'){
+      for (let x = 0; x < arr[i].items.length; x++) {
+        if(arr[i].items[x].name === 'Treats'){
+          quantity = arr[i].items[x].quantity;
+        }
+      }
+    }
+  }
+  return quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
