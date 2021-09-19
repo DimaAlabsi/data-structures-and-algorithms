@@ -22,7 +22,7 @@ function transformToLis(obj){
   // Solution code here...
   let arr2 = [];
   Object.keys(obj).map(i=>{
-      arr2.push(`<li>${i}: ${obj[i]}</li>`);
+ arr2.push(`<li>${i}: ${obj[i]}</li>`);
   });
   return arr2;
 };
@@ -56,7 +56,7 @@ const totalSum = (input) => {
   let total = 0;
   for (let i= 0; i < input.length; i++) {
  for (let x= 0; x < input[i].length; x++) {
-          total += input[i][x]
+ total += input[i][x]
       }
   }
   return total;
@@ -147,11 +147,10 @@ let findMaleAndFemale = (data) => {
         return i;
       }
     });
-    let name = arr2.map((v) => {
-      return v.name;
+    let names = arr2.map((v) => {
+      return v.names;
     });
-  
-    return name.join(" and ");
+    return names.join(" and ");
 };
 
 /* ------------------------------------------------------------------------------------------------
