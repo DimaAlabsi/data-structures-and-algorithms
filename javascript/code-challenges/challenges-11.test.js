@@ -39,6 +39,14 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
+  let count = 0;
+  let arr2 = input.filter(v => {
+    let integar = v.map(i => {
+      if (i === target)
+        return count++;
+    });
+  });
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +84,10 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  return input.map(arr =>
+     arr.filter(i => 
+      (typeof i === 'number' && i % 5 === 0)).map(v => Math.pow(2, v)));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,15 +154,11 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-    let arr2 = data.filter((i) => {
-      if(i.gender === "male" || i.gender === "female") {
-        return i;
-      }
-    });
-    let names = arr2.map((v) => {
-      return v.names;
-    });
-    return names.join(" and ");
+  return data.filter(i=> 
+    i.gender === 'male' || i.gender === 'female').map(v=> 
+      v.name).join(' and ');
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,6 +169,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   // Solution code here...
+  return data.reduce((a, b) => 
+  Number(a.height) < Number(b.height) ? a:b).name;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
