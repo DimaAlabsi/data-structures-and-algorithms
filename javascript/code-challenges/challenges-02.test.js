@@ -50,6 +50,7 @@ const addQuestion = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
+
 Write a function named forLoopTwoToThe that, given an array of integers as input, iterates over the array and returns a new array. The returned array should contain the result of raising 2 to the power of the original input element.
 
 You may choose to complete this challenge using a for loop, for...in syntax, or for...of syntax.

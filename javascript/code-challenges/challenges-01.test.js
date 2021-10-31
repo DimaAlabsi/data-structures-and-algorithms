@@ -6,7 +6,7 @@ CHALLENGE 1
 Write a function named `addOne` that takes an array of numbers, and returns a new array of the numbers, incremented by 1.
 
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
------------------------------------------------------------------------------------------------- */
+--------------  ---------------------------------------------------------------------------------- */
 
 const addOne = (arr) => {
   // Solution code here...
@@ -16,6 +16,7 @@ const addOne = (arr) => {
   });
   return arr2;
 };
+
 
 
 
@@ -37,6 +38,8 @@ const addExclamation = (arr) => {
   })
   return arr2;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -94,7 +97,6 @@ Then, write a function named addNumbers that takes in four arguments:
   - A callback function to use to add the numbers to the array (Hint: you already defined it)
 
 Within the addNumbers function, invoke the callback function as many times as necessary, based on the third argument of the addNumbers function.
-
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
@@ -114,6 +116,7 @@ const addNumbers = (num, arr, times, callback) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
+
 
 CHALLENGE 6
 

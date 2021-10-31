@@ -144,7 +144,8 @@ const listFoods = (recipe) => {
     item.splice(0,2);
     result.push(item.join(" "));
   });
-  return result;};
+  return result;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

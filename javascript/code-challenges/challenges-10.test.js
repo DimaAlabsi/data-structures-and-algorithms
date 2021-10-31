@@ -9,7 +9,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
-    let arr = str.split("");
+    let arr = str.split(""); 
   if (arr.length >10) {
     arr.splice(0,arr.length - 10);
   }
