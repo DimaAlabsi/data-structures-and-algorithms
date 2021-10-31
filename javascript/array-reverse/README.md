@@ -7,7 +7,10 @@
 
 ## Whiteboard Process
 
-[reverse array whiteboard](/mnt/c/Users/STUDENT/desktop/data-structures-and-algorithms/javascript/array-reverse/array-reverse.png)
+
+![reverse array whiteboard](array-reverse.png)
+
+
 
 ## Approach & Efficiency
 
