@@ -27,4 +27,5 @@ To run your tests
 |-----|-------|
 [array-reverse](javascript/array-reverse/README.md)|
 |[array-insert-shift](javascript/array-insert-shift/README.md)|
-|[array-binary-search](javascript/array-binary-search/README.md)
+|[array-binary-search](javascript/array-binary-search/README.md)|
+|[doubly-linked-list](javascript/linked-list/README.md)|
