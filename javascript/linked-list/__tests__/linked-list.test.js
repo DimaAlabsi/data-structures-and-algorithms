@@ -21,11 +21,15 @@ describe("Linked List", () => {
     expect(newLinkedList.head.value).toEqual(initialValue);
 
     let anotherValue = 'Second Item';
-    newList.append(anotherValue);
-    expect(newList.head.next.value).toEqual(anotherValue);
-    expect(newList.head.next.next).toBeNull();
-    expect(newList.head.value).toEqual(initialValue);
+    newLinkedList.append(anotherValue);
+    expect(newLinkedList.head.next.value).toEqual(anotherValue);
+    expect(newLinkedList.head.next.next).toBeNull();
+    expect(newLinkedList.head.value).toEqual(initialValue);
+
+    // ---
+    
   });
+
 
   test("the head point to the first node of ll", () => {
     const linkedlists = new LinkedList();
