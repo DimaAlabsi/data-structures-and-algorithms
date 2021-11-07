@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 
 const LinkedList = require('./lib/LinkedList');
@@ -13,3 +13,4 @@ ll.append(3);
 
 
 console.log(3);
+
