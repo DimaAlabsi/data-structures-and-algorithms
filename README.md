@@ -29,3 +29,4 @@ To run your tests
 |[array-insert-shift](javascript/array-insert-shift/README.md)|
 |[array-binary-search](javascript/array-binary-search/README.md)|
 |[doubly-linked-list](javascript/linked-list/README.md)|
+|[linked-list-kth](javascript/linked-list-kth/README.md)|
