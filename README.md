@@ -30,4 +30,7 @@ To run your tests
 |[array-binary-search](javascript/array-binary-search/README.md)|
 |[doubly-linked-list](javascript/linked-list/README.md)|
 |[linked-list-insertions](javascript/linked-list-insertions/README.md)|
+|[linked-list-kth](javascript/linked-list-kth/README.md)|
+
+
 
