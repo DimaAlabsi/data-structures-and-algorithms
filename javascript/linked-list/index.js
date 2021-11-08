@@ -1,11 +1,11 @@
-// 'use strict';
+'use strict';
 
 
 const LinkedList = require('./lib/LinkedList');
 
 
 
-const ll = new LinkedList(); // create a new instance of LL
+const ll = new LinkedList(); 
 
 ll.append(1);
 ll.append(2);
