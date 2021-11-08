@@ -1,7 +1,6 @@
-
 "use strict";
 
-const LinkedList = require("../lib/LinkedList");
+const LinkedList = require('../lib/LinkedList');
 
 describe("Linked List", () => {
   test("Can instantiate an empty linked list", () => {
@@ -30,7 +29,6 @@ describe("Linked List", () => {
     // ---
     
   });
-
 
   test("the head point to the first node of ll", () => {
     const linkedlists = new LinkedList();
@@ -73,7 +71,25 @@ describe("Linked List", () => {
 
     expect(linkedlists.toString()).toBe("{ test1 } -> { test2 } -> { test3 } -> NULL");
   });
+  test('Can successfully insert a node before a node' ,()=>{
+    let newNode=new LinkedList();
+    newNode.insert(1);
+    newNode.append(2);
+    newNode.append(3);
+    newNode.insertBefore(3,6);
+    expect(newNode.head.value).toBe(1)
+    expect(newNode.head.next.next.value).toBe(6)
+})
+
+test('Can successfully insert after a node ', ()=>{
+    let newNode=new LinkedList();
+    newNode.insert(1);
+    newNode.append(2);
+    newNode.append(3);
+    newNode.insertAfter(2,5);
+    expect(newNode.head.value).toBe(1)
+    expect(newNode.head.next.next.value).toBe(5)
+})
   
+
 });
-
-

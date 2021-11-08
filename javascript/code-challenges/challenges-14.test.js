@@ -180,7 +180,7 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+
   const rows = Object.values(rowCreator(board));
   const cols = Object.values(colCreator(board));
   const diags = Object.values(diagCreator(board));
@@ -241,7 +241,7 @@ function diagCreator(board) {
     return acc;
   }, 2);
   return newDiags;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
