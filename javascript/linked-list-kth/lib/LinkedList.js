@@ -1,6 +1,6 @@
 'use strict';
 
-const Node =requiredNum('./Node');
+const Node =require('./Node');
 
 class LinkedList{
     constructor(){
