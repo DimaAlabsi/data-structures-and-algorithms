@@ -11,7 +11,6 @@ describe("LinkedList tests", () => {
         let firstOne = "value A";
         newLinkedList.append(firstOne);
         expect(newLinkedList.head.value).toBe(firstOne);
-
         let secondValue = "value B";
         newLinkedList.append(secondValue);
         expect(newLinkedList.head.next.value).toBe(secondValue);
@@ -24,14 +23,12 @@ describe("LinkedList tests", () => {
         LinkedListA.append(2);
         LinkedListA.append(4);
         LinkedListA.append(6);
-
         let LinkedListB = new LinkedList();
         LinkedListB.append(1);
         LinkedListB.append(3);
-        LinkedListB.append(5);
-        let newLinkedList = new LinkedList();
+         let newLinkedList = new LinkedList();
         expect(newLinkedList.zipLinkedLists(LinkedListA, LinkedListB).toString()).toBe(
-            "{2}-->{1}-->{4}-->{3}-->{6}-->{5}-->null"
+            "{2}-->{1}-->{4}-->{3}-->{6}-->null"
         );
     });
 
@@ -56,13 +53,12 @@ test("length not equal(ziplinkedlist)", () => {
         LinkedListA.append(8);
         LinkedListA.append(6);
         LinkedListA.append(4);
-        LinkedListA.append(2);
         let LinkedListB = new LinkedList();
         LinkedListB.append(9);
         LinkedListB.append(7);
         LinkedListB.append(5);
         expect(newLinkedList.zipLinkedLists(LinkedListA, LinkedListB).toString()).toBe(
-            "{10}-->{9}-->{8}-->{7}-->{6}-->{5}-->{4}-->{2}-->null"
+            "{10}-->{9}-->{8}-->{7}-->{6}-->{5}-->{4}-->null"
         );
     });
 
