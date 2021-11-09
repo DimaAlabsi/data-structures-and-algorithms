@@ -2,74 +2,69 @@
 let LinkedList = require("../lib/LinkedList");
 
 describe("LinkedList tests", () => {
-  it("constructor()", () => {
-    let newList = new LinkedList();
-    expect(newList.head).toBeNull();
-  });
+    test("constructor()", () => {
+        let newLinkedList = new LinkedList();
+        expect(newLinkedList.head).toBeNull();
+    });
+    test("append", () => {
+        let newLinkedList = new LinkedList();
+        let firstOne = "value A";
+        newLinkedList.append(firstOne);
+        expect(newLinkedList.head.value).toBe(firstOne);
 
-  it("append", () => {
-    let newList = new LinkedList();
-    let initialValue = "First Item";
-    newList.append(initialValue);
-    expect(newList.head.value).toEqual(initialValue);
+        let secondValue = "value B";
+        newLinkedList.append(secondValue);
+        expect(newLinkedList.head.next.value).toBe(secondValue);
+        expect(newLinkedList.head.next.next).toBeNull();
+        expect(newLinkedList.head.value).toBe(firstOne);
+    });
+    test("happy case (zip ll)", () => {
 
-    let anotherOne = "Second Item";
-    newList.append(anotherOne);
-    expect(newList.head.next.value).toEqual(anotherOne);
-    expect(newList.head.next.next).toBeNull();
-    expect(newList.head.value).toEqual(initialValue);
-  });
+        let LinkedListA = new LinkedList();
+        LinkedListA.append(2);
+        LinkedListA.append(4);
+        LinkedListA.append(6);
 
-  it("happy case (zip ll)", () => {
-    
-    let list1 = new LinkedList();
-    list1.append(2);
-    list1.append(4);
-    list1.append(6);
-
-    let list2 = new LinkedList();
-    list2.append(1);
-    list2.append(3);
-    list2.append(5);
-    let newList = new LinkedList();
-    expect(newList.zipLists(list1, list2).toString()).toEqual(
-        "{2}-->{1}-->{4}-->{3}-->{6}-->{5}-->null"
-    );
-  });
+        let LinkedListB = new LinkedList();
+        LinkedListB.append(1);
+        LinkedListB.append(3);
+        LinkedListB.append(5);
+        let newLinkedList = new LinkedList();
+        expect(newLinkedList.zipLinkedLists(LinkedListA, LinkedListB).toString()).toBe(
+            "{2}-->{1}-->{4}-->{3}-->{6}-->{5}-->null"
+        );
+    });
 
 
-  it("empty ll (zipll)", () => {
-    let newList = new LinkedList();
-    let list1 = new LinkedList();
-
-    let list2 = new LinkedList();
-    list2.append(2);
-    list2.append(4);
-    list2.append(6);
-    list2.append(8);
-    list2.append(10);
-    expect(newList.zipLists(list1, list2).toString()).toEqual(
-      "{2}-->{4}-->{6}-->{8}-->{10}-->null"
-    );
-  });
-
-
-  it("length not equal(ziplinkedlist)", () => {
-    let newList = new LinkedList();
-    let list1 = new LinkedList();
-    list1.append(10);
-    list1.append(8);
-    list1.append(6);
-    list1.append(4);
-    list1.append(2);
-    let list2 = new LinkedList();
-    list2.append(9);
-    list2.append(7);
-    list2.append(5);
-    expect(newList.zipLists(list1, list2).toString()).toEqual(
-      "{10}-->{9}-->{8}-->{7}-->{6}-->{5}-->{4}-->{2}-->null"
-    );
-  });
+    test("empty ll (zipll)", () => {
+        let newLinkedList = new LinkedList();
+        let LinkedListA = new LinkedList();
+         let LinkedListB = new LinkedList();
+        LinkedListB.append(2);
+        LinkedListB.append(4);
+        LinkedListB.append(6);
+        LinkedListB.append(8);
+        LinkedListB.append(10);
+        expect(newLinkedList.zipLinkedLists(LinkedListA, LinkedListB).toString()).toBe(
+            "{2}-->{4}-->{6}-->{8}-->{10}-->null"
+        );
+    });
+test("length not equal(ziplinkedlist)", () => {
+        let newLinkedList = new LinkedList();
+        let LinkedListA = new LinkedList();
+        LinkedListA.append(10);
+        LinkedListA.append(8);
+        LinkedListA.append(6);
+        LinkedListA.append(4);
+        LinkedListA.append(2);
+        let LinkedListB = new LinkedList();
+        LinkedListB.append(9);
+        LinkedListB.append(7);
+        LinkedListB.append(5);
+        expect(newLinkedList.zipLinkedLists(LinkedListA, LinkedListB).toString()).toBe(
+            "{10}-->{9}-->{8}-->{7}-->{6}-->{5}-->{4}-->{2}-->null"
+        );
+    });
 
 
 

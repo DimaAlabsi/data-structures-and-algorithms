@@ -37,7 +37,7 @@ class LinkedList {
         }
         return (string += 'null')
     }
-    zipLists(LinkedListA, LinkedListB) {
+    zipLinkedLists(LinkedListA, LinkedListB) {
 
         let LinkedListResult = new LinkedList();
         if (!LinkedListA.head) {
