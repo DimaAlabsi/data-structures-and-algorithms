@@ -31,6 +31,11 @@ To run your tests
 |[doubly-linked-list](javascript/linked-list/README.md)|
 |[linked-list-insertions](javascript/linked-list-insertions/README.md)|
 |[linked-list-kth](javascript/linked-list-kth/README.md)|
+|[linked-list-zip](javascript/linked-list-zip/README.md)|
+|[stack-and-queue](javascript/stack-and-queue/README.md)|
+
+
+
 
 
 
