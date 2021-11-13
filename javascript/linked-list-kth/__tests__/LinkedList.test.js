@@ -32,7 +32,6 @@ describe('test kth Linked linkedListTests', () => {
   test('Where k and the length of the linkedListTest are the same', () => {
     let linkedListTest = new LinkedList();
     linkedListTest.insert(1);
-    //
     linkedListTest.insert(2);
     linkedListTest.insert(3);
     linkedListTest.insert(4);
