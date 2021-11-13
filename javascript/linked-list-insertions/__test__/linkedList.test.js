@@ -1,8 +1,15 @@
 "use strict";
-
+const Node = require('../lib/Node');
 const LinkedList = require('../lib/LinkedList');
 
 describe("Linked List", () => {
+  it('node test', ()=> {
+    let value = 4;
+    let newNode = new Node(value);
+    expect(newNode.value).toBe(value);
+    expect(newNode.next).toBeNull();
+});
+
   test("Can instantiate an empty linked list", () => {
     const linkedlists = new LinkedList();
     expect(linkedlists).toBeInstanceOf(LinkedList);
@@ -28,6 +35,12 @@ describe("Linked List", () => {
 
     // ---
     
+  });
+  test(" add a node to the end of the linked list", () => {
+    let newLinkedList = new LinkedList();
+    newLinkedList.append("test1");
+    expect(newLinkedList.head.value).toEqual("test1");
+    expect(newLinkedList.head.next).toBeNull();
   });
 
   test("the head point to the first node of ll", () => {
@@ -90,6 +103,63 @@ test('Can successfully insert after a node ', ()=>{
     expect(newNode.head.value).toBe(1)
     expect(newNode.head.next.next.value).toBe(5)
 })
-  
+test('Returns a string representing all the values in the Linked List', () => {
+  let linkedListTest = new LinkedList;
+  linkedListTest.insert(1);
+  linkedListTest.append(2);
+  expect(linkedListTest.toString()).toBe('{ 1 } -> { 2 } -> NULL');
+});
+test("Can instantiate an empty linked list", () => {
+  const linkedlists = new LinkedList();
+  expect(linkedlists).toBeInstanceOf(LinkedList);
+  expect(linkedlists.head).toBeNull();
+});
+
+
+test(" add multiple nodes to the end of a linked list", () => {
+  let newLinkedList = new LinkedList();
+  newLinkedList.append("test1");
+  newLinkedList.append("test2");
+  newLinkedList.append("test3");
+  expect(newLinkedList.head.value).toEqual("test1");
+  expect(newLinkedList.head.next.value).toEqual("test2");
+  expect(newLinkedList.head.next.next.value).toEqual("test3");
+  expect(newLinkedList.head.next.next.next).toBeNull();
+});  
+it("insert a node before a node located in the middle of a linked list", () => {
+  let neewLinkedList = new LinkedList();
+  neewLinkedList.insert("3");
+  neewLinkedList.insert("2");
+  neewLinkedList.insert("1");
+  neewLinkedList.insertBefore("2", "4");
+  expect(neewLinkedList.head.value).toEqual("1");
+  expect(neewLinkedList.head.next.value).toEqual("4");
+  expect(neewLinkedList.head.next.next.value).toEqual("2");
+  expect(neewLinkedList.head.next.next.next.value).toEqual("3");
+  expect(neewLinkedList.head.next.next.next.next).toBeNull();
+});
+it("Can successfully insert after a node in the middle of the linked list", () => {
+  let newLinkedList = new LinkedList();
+  newLinkedList.insert("3");
+  newLinkedList.insert("2");
+  newLinkedList.insert("1");
+  newLinkedList.insertAfter("2", "4");
+  expect(newLinkedList.head.value).toEqual("1");
+  expect(newLinkedList.head.next.value).toEqual("2");
+  expect(newLinkedList.head.next.next.value).toEqual("4");
+  expect(newLinkedList.head.next.next.next.value).toEqual("3");
+  expect(newLinkedList.head.next.next.next.next).toBeNull();
+});
+
+it("Can successfully insert a node after the last node of the linked list", () => {
+  let newLinkedList = new LinkedList();
+  newLinkedList.insert("2");
+  newLinkedList.insert("1");
+  newLinkedList.insertAfter("2", "3");
+  expect(newLinkedList.head.value).toEqual("1");
+  expect(newLinkedList.head.next.value).toEqual("2");
+  expect(newLinkedList.head.next.next.value).toEqual("3");
+  expect(newLinkedList.head.next.next.next).toBeNull();
+});
 
 });
