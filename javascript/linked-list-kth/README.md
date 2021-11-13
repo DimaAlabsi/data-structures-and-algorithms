@@ -21,10 +21,16 @@ adds a new node with the given value to the end of the list
 
 ## Whiteboard Process
 
-![whiteboard1](/javascript/linked-list-kth/images/whiteboard1.png)
-![whiteboard2](/javascript/linked-list-kth/images/whiteboard2.png)
+![whiteboard2](/javascript/linked-list-kth/images/whiteBoard.png)
 
-![whiteboard3](/javascript/linked-list-kth/images/test.png)
+![whiteboard1](/javascript/linked-list-kth/images/linked-list-kth.png)
+
+
+
+***Testing Results***
+
+![whiteboard2](/javascript/linked-list-kth/images/results-of-testing.png)
+
 
 
 ## Approach & Efficiency

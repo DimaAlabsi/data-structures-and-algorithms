@@ -1,60 +1,85 @@
 "use strict";
+const Node = require('../lib/Node');
+const LinkedList = require("../lib/LinkedList");
 
-const LinkedList = require('../lib/LinkedList');
-
-describe("Linked List", () => {
+describe('test kth Linked linkedListTests', () => {
+  it("create a Node", () => {
+    const testOne = "test";
+    const node = new Node(testOne);
+    expect(node.value).toBe(testOne);
+    expect(node.next).toBeNull();
+  });
   test("Can instantiate an empty linked list", () => {
     const linkedlists = new LinkedList();
     expect(linkedlists).toBeInstanceOf(LinkedList);
     expect(linkedlists.head).toBeNull();
   });
-  
-  test('append()', () => {
-    let newLinkedList = new LinkedList();
-    let initialValue = 1;
-    newLinkedList.append(initialValue);
-    expect(newLinkedList.head.value).toBe(initialValue);
 
-    let anotherValue = 'Second Item';
-    newLinkedList.append(anotherValue);
-    expect(newLinkedList.head.next.value).toBe(anotherValue);
-    expect(newLinkedList.head.next.next).toBeNull();
-    expect(newLinkedList.head.value).toBe(initialValue);
+  test('Where k is greater than the length of the linked linkedListTest', () => {
+    let linkedListTest = new LinkedList();
+    linkedListTest.insert(1);
+    linkedListTest.insert(2);
+    linkedListTest.insert(3);
+    linkedListTest.insert(4);
+    linkedListTest.insert(5);
 
-    // ---
-    
-  });
-  test("returns the value ", () => {
-    const list = new LinkedList();
-    list.append("1");
-    list.append("3");
-    list.append("8");
-    list.append("2");
 
-    expect(list.kthFromEnd(0)).toBe("2");
-    expect(list.kthFromEnd(2)).toBe("3");
-    expect(list.kthFromEnd(10)).toBe(
-        'the index isnot exist'
-    );
-    expect(list.kthFromEnd(-5)).toBe('No LINKED LIST here 🤫');
+    let k = 7;
+
+    expect(linkedListTest.kthFromEnd(k)).toBe('k is invalid');
   });
 
-  test("k > length ", () => {
-    const list = new LinkedList();
-    list.append("1");
-    list.append("3");
-    list.append("8");
-    list.append("2");
-
-    expect(list.kthFromEnd(0)).toBe("2");
-    expect(list.kthFromEnd(2)).toBe("3");
-    expect(list.kthFromEnd(10)).toBe(
-        'the index isnot exist'
-    );
-    expect(list.kthFromEnd(-5)).toBe('No LINKED LIST here 🤫');
-    
+  test('Where k and the length of the linkedListTest are the same', () => {
+    let linkedListTest = new LinkedList();
+    linkedListTest.insert(1);
+    linkedListTest.insert(2);
+    linkedListTest.insert(3);
+    linkedListTest.insert(4);
+    linkedListTest.insert(5);
+    linkedListTest.insert(6);
+    let k = 6;
+    expect(linkedListTest.kthFromEnd(k)).toBe('k is invalid');
   });
 
- 
+  test('Where k is not a postestive integer', () => {
+    let linkedListTest = new LinkedList();
+    linkedListTest.insert(1);
+    linkedListTest.insert(2);
+    linkedListTest.insert(4);
+    linkedListTest.insert(5);
 
+
+
+    let k = -1;
+
+    expect(linkedListTest.kthFromEnd(k)).toBe('k is invalid');
+  });
+
+  test('Where the linked linkedListTest is of a size 1', () => {
+    let linkedListTest = new LinkedList();
+    linkedListTest.insert(8);
+    let k = 0;
+
+    expect(linkedListTest.kthFromEnd(k)).toBe(8);
+  });
+
+  test('Happy Path” where k is not at the end, but somewhere in the middle of the linked linkedListTest', () => {
+    let linkedListTest = new LinkedList();
+    linkedListTest.insert(1);
+    linkedListTest.insert(2);
+    linkedListTest.insert(3);
+    linkedListTest.insert(4);
+    linkedListTest.insert(5);
+    linkedListTest.insert(6);
+    let k = 2;
+
+    expect(linkedListTest.kthFromEnd(k)).toBe(3);
+  });
+  test('when linked linkedListTest is empty', () => {
+    const linkedListTest = new LinkedList();
+    let k = 2;
+
+    expect(linkedListTest.kthFromEnd(k)).toBe('No LINKED LIST here 🤫');
+  });
+  //   });
 });
