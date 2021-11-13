@@ -15,8 +15,7 @@ class LinkedList {
         }
         this.head = node;
     }
-
-    includes(value) {
+     includes(value) {
         let result = false;
         let nodes = this.head;
         while (nodes) {
