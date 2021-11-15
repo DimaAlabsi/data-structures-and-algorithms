@@ -28,6 +28,8 @@ describe("Linked List", () => {
   //   expect(newList.head.value).toEqual(initialValue);
   // });
 
+
+
   test("the head point to the first node of ll", () => {
     const linkedlists = new LinkedList();
     linkedlists.insert("test1");
