@@ -6,8 +6,9 @@ const Node = require('./Node');
 class LinkedList {
     constructor() {
         this.head = null;
+        this.length = 0;
     }
-   
+
     insert(value) {
         const node = new Node(value);
         if (this.head) {
@@ -30,28 +31,34 @@ class LinkedList {
     //     }
     // }
     insertBefore(value, newValue) {
+        if(this.length < value){
+            return 'No change here 🙃';
+          }
         let newNode = this.head;
         const node = new Node(newValue);
         if (newNode.value === value) {
-          node.next = this.head;
-          this.head = node;
+            node.next = this.head;
+            this.head = node;
         } else {
-          while (newNode.next) {
-            if (newNode.next.value === value) {
-              node.next = newNode.next;
-              newNode.next = node;
-              break;
-            } else {
-              newNode = newNode.next;
+            while (newNode.next) {
+                if (newNode.next.value === value) {
+                    node.next = newNode.next;
+                    newNode.next = node;
+                    break;
+                } else {
+                    newNode = newNode.next;
+                }
             }
-          }
         }
-      }
+    }
 
     insertAfter(value, newValue) {
+        if(this.length < value){
+            return 'No change here 🙃';
+          }
         let newNode = new Node(newValue);
         let currentOne = this.head;
-
+        
         while (currentOne) {
             if (currentOne.value === value) {
                 newNode.next = currentOne.next;
@@ -66,7 +73,8 @@ class LinkedList {
         let nodes = this.head;
         while (nodes) {
             if (nodes.value == value) {
-                return (result = true);}
+                return (result = true);
+            }
             nodes = nodes.next;
         }
         return result;
@@ -83,6 +91,7 @@ class LinkedList {
             }
             currentOneN.next = newNode;
         }
+        this.length++;
     }
     toString() {
         let string = "";
@@ -94,7 +103,7 @@ class LinkedList {
         string += `NULL`;
         return string;
     }
-   
+
 }
 
 

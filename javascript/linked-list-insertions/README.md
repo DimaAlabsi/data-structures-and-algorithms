@@ -37,7 +37,7 @@ adds a new node with the given new value immediately after the first node that h
 ![white board](/javascript/linked-list-insertions/images/whiteboard2.png)
 
 
-![test](/javascript/linked-list-insertions/images/linkedlisttest.png)
+![test](/javascript/linked-list-insertions/images/tests.png)
 
 
 ## Approach & Efficiency
