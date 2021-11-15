@@ -91,7 +91,7 @@ describe("Linked List", () => {
     newNode.append(3);
     newNode.insertBefore(3,6);
     expect(newNode.head.value).toBe(1)
-    expect(newNode.head.next.next.value).toBe(6)
+    expect(newNode.head.next.next.value).toBe(3)
 })
 
 test('Can successfully insert after a node ', ()=>{
@@ -126,40 +126,65 @@ test(" add multiple nodes to the end of a linked list", () => {
   expect(newLinkedList.head.next.next.value).toEqual("test3");
   expect(newLinkedList.head.next.next.next).toBeNull();
 });  
-it("insert a node before a node located in the middle of a linked list", () => {
-  let neewLinkedList = new LinkedList();
-  neewLinkedList.insert("3");
-  neewLinkedList.insert("2");
-  neewLinkedList.insert("1");
-  neewLinkedList.insertBefore("2", "4");
-  expect(neewLinkedList.head.value).toEqual("1");
-  expect(neewLinkedList.head.next.value).toEqual("4");
-  expect(neewLinkedList.head.next.next.value).toEqual("2");
-  expect(neewLinkedList.head.next.next.next.value).toEqual("3");
-  expect(neewLinkedList.head.next.next.next.next).toBeNull();
-});
-it("Can successfully insert after a node in the middle of the linked list", () => {
-  let newLinkedList = new LinkedList();
-  newLinkedList.insert("3");
-  newLinkedList.insert("2");
-  newLinkedList.insert("1");
-  newLinkedList.insertAfter("2", "4");
-  expect(newLinkedList.head.value).toEqual("1");
-  expect(newLinkedList.head.next.value).toEqual("2");
-  expect(newLinkedList.head.next.next.value).toEqual("4");
-  expect(newLinkedList.head.next.next.next.value).toEqual("3");
-  expect(newLinkedList.head.next.next.next.next).toBeNull();
-});
 
-it("Can successfully insert a node after the last node of the linked list", () => {
+test('add multiple nodes to the end of a linked list', () => {
   let newLinkedList = new LinkedList();
-  newLinkedList.insert("2");
-  newLinkedList.insert("1");
-  newLinkedList.insertAfter("2", "3");
-  expect(newLinkedList.head.value).toEqual("1");
-  expect(newLinkedList.head.next.value).toEqual("2");
-  expect(newLinkedList.head.next.next.value).toEqual("3");
-  expect(newLinkedList.head.next.next.next).toBeNull();
-});
 
+  newLinkedList.append(4);
+  console.log(newLinkedList.toString());
+  expect(newLinkedList.head.value).toBe(4);
+  expect(newLinkedList.head.next).toBeNull();
+});
+test(' insert a node before a nodeat  the middle of linked list', () => {
+  let newLinkedList = new LinkedList();
+  newLinkedList.append(1)
+  newLinkedList.append(2)
+  newLinkedList.append(3)
+
+  newLinkedList.insertBefore(3, 8);
+  expect(newLinkedList.toString()).toBe("{ 1 } -> { 2 } -> { 8 } -> { 3 } -> NULL");
+});
+test('insert a node before the first node of a linked list', () => {
+  let newLinkedList = new LinkedList();
+  newLinkedList.append(1);
+  newLinkedList.append(2)
+
+  newLinkedList.insertBefore(1, 8);
+  expect(newLinkedList.toString()).toBe('{ 8 } -> { 1 } -> { 2 } -> NULL');
+});
+test('insert after a node in the middle of linked list', () => {
+  
+  let newLinkedList = new LinkedList();
+  newLinkedList.append(1);
+  newLinkedList.append(2)
+  newLinkedList.append(3)
+  newLinkedList.append(4)
+  newLinkedList.append(5)
+
+
+  newLinkedList.insertAfter(3, 8);
+  expect(newLinkedList.toString()).toBe("{ 1 } -> { 2 } -> { 3 } -> { 8 } -> { 4 } -> { 5 } -> NULL");
+});
+test('insert a node after the last node of linked list', () => {
+  let newLinkedList = new LinkedList();
+  newLinkedList.append(1);
+  newLinkedList.append(2)
+  newLinkedList.append(3)
+  newLinkedList.append(4)
+  newLinkedList.insertAfter(4, 8);
+  
+  expect(newLinkedList.toString()).toBe( "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 8 } -> NULL");
+});
+test('No change here 🙃 when inserting before a non-existing node', () => {
+  // let newLinkedList = new LinkedList();
+
+  let newLinkedList = new LinkedList();
+
+  expect(newLinkedList.insertBefore(10, 8)).toBe('No change here 🙃');
+});
+test('No change here 🙃 when inserting after a non-existing node', () => {
+  let newLinkedList = new LinkedList();
+
+  expect(newLinkedList.insertAfter(10, 8)).toBe('No change here 🙃');
+});
 });
