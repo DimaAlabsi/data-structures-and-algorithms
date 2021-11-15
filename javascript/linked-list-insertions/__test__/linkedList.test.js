@@ -161,5 +161,22 @@ it("Can successfully insert a node after the last node of the linked list", () =
   expect(newLinkedList.head.next.next.value).toEqual("3");
   expect(newLinkedList.head.next.next.next).toBeNull();
 });
-
+it(' Can successfully insert a node before the first node of a linked list', () => {
+  testingList.insertBefore(1, 8);
+  expect(testingList.toString()).toEqual('{ 8 } -> { 1 } -> { 2 } -> { 8 } -> { 3 } -> { 8 } -> { 4 } -> NULL');
+});
+// it(' Can successfully insert after a node in the middle of the linked list', () => {
+//   testingList.insertAfter(3, 8);
+//   expect(testingList.toString()).toEqual('head -> { 8 } -> { 1 } -> { 2 } -> { 8 } -> { 3 } -> { 8 } -> { 4 } -> NULL');
+// });
+// it(' Can successfully insert a node after the last node of the linked list', () => {
+//   testingList.insertAfter(4, 8);
+//   expect(testingList.toString()).toEqual('head -> { 8 } -> { 1 } -> { 2 } -> { 8 } -> { 3 } -> { 8 } -> { 4 } -> { 8 } -> NULL');
+// });
+// it(' Return an exception message when inserting before a non-existing node', () => {
+//   expect(testingList.insertBefore(10, 8)).toEqual('No change, method exception');
+// });
+// it(' Return a message when inserting after a non-existing node', () => {
+//   expect(testingList.insertAfter(10, 8)).toEqual('No change, method exception');
+// });
 });
