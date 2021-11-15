@@ -15,18 +15,18 @@ describe("Linked List", () => {
     expect(linkedlists.head.value).toBe("test1");
     expect(linkedlists.head.next).toBeNull();
   });
-  test('append()', () => {
-    let newLinkedList = new LinkedList();
-    let initialValue = 1;
-    newLinkedList.append(initialValue);
-    expect(newLinkedList.head.value).toEqual(initialValue);
+  // test('append()', () => {
+  //   let newLinkedList = new LinkedList();
+  //   let initialValue = 1;
+  //   newLinkedList.append(initialValue);
+  //   expect(newLinkedList.head.value).toEqual(initialValue);
 
-    let anotherValue = 'Second Item';
-    newList.append(anotherValue);
-    expect(newList.head.next.value).toEqual(anotherValue);
-    expect(newList.head.next.next).toBeNull();
-    expect(newList.head.value).toEqual(initialValue);
-  });
+  //   let anotherValue = 'Second Item';
+  //   newList.append(anotherValue);
+  //   expect(newList.head.next.value).toEqual(anotherValue);
+  //   expect(newList.head.next.next).toBeNull();
+  //   expect(newList.head.value).toEqual(initialValue);
+  // });
 
   test("the head point to the first node of ll", () => {
     const linkedlists = new LinkedList();
