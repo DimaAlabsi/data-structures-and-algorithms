@@ -33,6 +33,8 @@ To run your tests
 |[linked-list-kth](javascript/linked-list-kth/README.md)|
 |[linked-list-zip](javascript/linked-list-zip/README.md)|
 |[stack-and-queue](javascript/stack-and-queue/README.md)|
+|[trees](javascript/trees/README.md)|
+
 
 
 
