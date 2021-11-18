@@ -33,6 +33,9 @@ To run your tests
 |[linked-list-kth](javascript/linked-list-kth/README.md)|
 |[linked-list-zip](javascript/linked-list-zip/README.md)|
 |[stack-and-queue](javascript/stack-and-queue/README.md)|
+|[stack-queue-pseudo](javascript/stack-queue-pseudo/README.md)|
+|[stack-queue-animal-shelter](javascript/stack-queue-animal-shelter/README.md)|
+|[stack-queue-brackets](javascript/stack-queue-brackets/README.md)|
 |[trees](javascript/trees/README.md)|
 
 
