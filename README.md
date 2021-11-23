@@ -39,6 +39,8 @@ To run your tests
 |[trees](javascript/trees/README.md)|
 |[tree-max](javascript/tree-max/README.md)|
 |[breadth first](javascript/tree-breadth-first/README.md)|
+|[tree-fizz-buzz](javascript/tree-fizz-buzz/README.md)|
+
 
 
 
