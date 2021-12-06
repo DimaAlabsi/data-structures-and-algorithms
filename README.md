@@ -41,6 +41,8 @@ To run your tests
 |[breadth first](javascript/tree-breadth-first/README.md)|
 |[tree-fizz-buzz](javascript/tree-fizz-buzz/README.md)|
 |[InsertionSort](javascript/InsertionSort/BLOG.md)|
+|[MergeSort](javascript/MergeSort/BLOG.md)|
+
 
 
 
