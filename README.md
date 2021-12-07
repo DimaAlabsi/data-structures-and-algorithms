@@ -42,6 +42,7 @@ To run your tests
 |[tree-fizz-buzz](javascript/tree-fizz-buzz/README.md)|
 |[InsertionSort](javascript/InsertionSort/BLOG.md)|
 |[MergeSort](javascript/MergeSort/BLOG.md)|
+|[QuickSort](javascript/QuickSort/BLOG.md)|
 
 
 
