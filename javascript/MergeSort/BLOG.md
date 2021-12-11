@@ -29,6 +29,8 @@
 ![test result](/javascript/MergeSort/img/tests.PNG)
 ## Solution
 
+
+
 ![visual](/javascript/MergeSort/img/visual.PNG)
 
 ### code

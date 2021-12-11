@@ -8,6 +8,11 @@
 * left — is an array that stores elements of the passed array which are less than the pivot.
 * right — the same as left, but stores elements greater or equal to the pivot.
 
+
+
+***Quick sort is a sorting algorithm that splits up an array into equal parts and sets a pointer to both ends of the array and a pivot in the middle of the array. If the left value is greater than the pivot and the right is less than the pivot they are swapped. This is done recursively until the pointers meet in the middle. It is a very efficient sorting algorithm - O(log n).***
+
+
 ## Whiteboard Process
 
 ![whiteBoard](/javascript/QuickSort/img/quicksortWhiteBoard.PNG)
@@ -28,8 +33,31 @@
 
 
 ![test result](/javascript/QuickSort/img/quickSortTest.PNG)
+
 ## Solution
 
+find the "pivot" element in the array,determine pivot as middle element
+
+left pointer the first element in array.
+
+right pointer the last element in array.
+
+Compare the left if it is less than the pivot element, then move the left pointer to the right (add 1 to the left index). Continue this until left side element is greater than or equal to the pivot element.
+
+Compare the right element and if it is greater than the pivot element, then move the right pointer to the left (subtract 1 to the right index). Continue this until right side element is less than or equal to the pivot element.
+
+Check if left pointer is less than or equal to right pointer, then swap the elements in locations of these pointers.
+
+Increment the left pointer and decrement the right pointer.
+
+If index of left pointer is still less than the index of the right pointer, then repeat the process; else return the index of the left pointer.
+
+
+
+![visual](/javascript/QuickSort/img/quickSort.png)
+
+### Big O
+![big o](/javascript/QuickSort/img/Big0.png)
 
 
 ### code
