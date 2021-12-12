@@ -42,7 +42,9 @@ To run your tests
 |[tree-fizz-buzz](javascript/tree-fizz-buzz/README.md)|
 |[InsertionSort](javascript/InsertionSort/BLOG.md)|
 |[MergeSort](javascript/MergeSort/BLOG.md)|
-|[QuickSort](javascript/QuickSort/BLOG.md)|
+|[hashtable](javascript/hashtable/README.md)|
+|[hashmap-repeated-word](javascript/hashmap-repeated-word/README.md)|
+
 
 
 
