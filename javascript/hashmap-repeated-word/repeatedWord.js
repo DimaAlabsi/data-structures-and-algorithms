@@ -100,9 +100,20 @@ class HashMap {
     }
 
 
-    Write a function called repeated word that finds the first word to occur more than once in a string
-    Arguments: string
-    Return: string
+  repeatedWord(string) {
+    const arrayOfStrings = string.split(/[ ,]+/);
+    let key;
+    let hashedKey;
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+      key = arrayOfStrings[i].toLowerCase();
+      this.set(key, "x");
+      hashedKey = this.getHash(key);
+      if (this.map[hashedKey].head.next) {
+        return key;
+      }
+    }
+  }
+}
   
   
   module.exports = HashMap;
