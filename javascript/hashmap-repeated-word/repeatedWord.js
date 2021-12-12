@@ -1,5 +1,4 @@
 'use strict';
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -45,7 +44,7 @@ class HashMap {
     }
   
    
-    getHash(key) { //gethashedkey
+    getHash(key) {
       const assciSum = key.split('').reduce((p, n) => p + n.charCodeAt(0), 0);
       const withPrime = assciSum * 599;
       return withPrime % this.size; 
@@ -115,5 +114,4 @@ class HashMap {
   }
 }
   
-  
-  module.exports = HashMap;
+module.exports = HashMap;
