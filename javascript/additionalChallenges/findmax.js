@@ -8,6 +8,8 @@ class Stack {
     push(element) {
       // if the stack is empty or the element we're pushing is greater than currentMax, add the new element to maxValues
       if (this.length === 0 || element >= this.findMax()) {
+        // if find minumum 
+        // if (this.length === 0 || element <= this.findMax()) 
         this.maxValues.push(element)
       }
       // otherwise, push the currentMax to maxValues again, to align lengths of arrays and keep currentMax

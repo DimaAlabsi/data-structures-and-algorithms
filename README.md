@@ -44,6 +44,7 @@ To run your tests
 |[MergeSort](javascript/MergeSort/BLOG.md)|
 |[hashtable](javascript/hashtable/README.md)|
 |[hashmap-repeated-word](javascript/hashmap-repeated-word/README.md)|
+|[treeIntersection](javascript/treeIntersection/README.md)|
 
 
 
