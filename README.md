@@ -45,6 +45,8 @@ To run your tests
 |[hashtable](javascript/hashtable/README.md)|
 |[hashmap-repeated-word](javascript/hashmap-repeated-word/README.md)|
 |[treeIntersection](javascript/treeIntersection/README.md)|
+|[hashmap-left-join](javascript/hashmap-left-join/README.md)|
+
 
 
 
