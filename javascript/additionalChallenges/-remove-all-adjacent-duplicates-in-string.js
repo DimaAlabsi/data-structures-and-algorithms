@@ -1,5 +1,9 @@
 // -remove-all-adjacent-duplicates-in-string
 
+// O(1>> space
+
+// O(n) >> time
+
 
 cosnt removeDuplicates = function(S) {
     // empty array
