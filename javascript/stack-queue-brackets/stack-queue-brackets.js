@@ -18,3 +18,9 @@ const validateBrackets= function (pars){
 }
 
 module.exports= validateBrackets;
+
+
+
+//  space O(n) happy caseO(n/2)
+
+// time >> O(n) 
