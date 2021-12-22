@@ -1,7 +1,7 @@
 "use strict";
 
-const HashMap = require('../hashmap-left-join');
-
+const leftJoin = require("../hashmap-left-join");
+const {HashMap} = require("../hashTable");
 
 
 describe("left join", () => {
@@ -38,18 +38,18 @@ describe("left join", () => {
 
          
  let resuult = new HashMap(888)
-    expect(resuult.leftJoin(leftTable, rightTable)).toEqual(expectedResult);
+    expect(leftJoin(leftTable, rightTable)).toEqual(expectedResult);
   });
 
   it("return empty array if the left hash one is empty ", () => {
     let result = new HashMap(888)
 
-    expect(result.leftJoin(emptyTable, rightTable)).toEqual([]);
+    expect(leftJoin(emptyTable, rightTable)).toEqual([]);
   });
 
   it("return null for the second value if no match in the right table", () => {
     let result = new HashMap(888)
 
-    expect(result.leftJoin(leftTable, notMatchTable)[0][2]).toBe(null);
+    expect(leftJoin(leftTable, notMatchTable)[0][2]).toBe(null);
   });
 });
